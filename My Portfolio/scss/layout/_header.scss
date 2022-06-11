@@ -1,0 +1,101 @@
+.header{
+    position: relative;
+    width: 100%;
+    background-color: hsl(249, 68%, 96%);
+    padding-bottom: 30px;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        // @author Steve Schoger
+        // @link :  https://heropatterns.com/
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%237562E0' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    &-container{
+        position: relative;
+        z-index: 1;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        
+        @include respond(tab-port){
+            flex-direction: column;
+            gap: 30px;    
+        }
+        @include respond(phone){
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+    &-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+        @include respond(tab-port){
+            order: 2;
+        }
+    }
+    &-img{
+        width: 100%;
+        margin-top: 15px;
+        & img{
+            width: 100%;
+        }
+        
+        @include respond(tab-port){
+            order: 1;
+        }
+    }
+}
+.section-brands{
+    // background-color: #F1EFFC;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.brand-border{
+    width: 80%;
+    margin: auto;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+}
+.brands{
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    @include respond(phone){
+        width: 90%;
+    }
+
+    & img{
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all 0.25s;
+        &:hover{
+            opacity: 1;
+        }
+        @include respond(phone){
+            width: 70px;
+        }
+    }
+}

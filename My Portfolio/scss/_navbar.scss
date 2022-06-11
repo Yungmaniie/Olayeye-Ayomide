@@ -1,0 +1,36 @@
+.nav-link{
+    cursor:  pointer;
+    font-family: $ff-inter !important;
+    color:#3d3d3d !important;
+    font-size: 16px;
+}
+#app-navbar .navbar-toggler{
+    border-color: transparent !important;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+#app-navbar{
+    padding: 15px 0 !important;
+    background-color: #fff !important;
+    backdrop-filter: blur(30px);
+    transition: all 0.3s ease-in-out;
+}
+.nav-link {
+    &:hover{
+        color: $primary-color !important;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.social-icons a img {
+    transition: all .15s ease-in;
+    &:hover{
+        opacity: 0.9;
+        transform: translateY(-2px) scale(1.1);
+    }
+}

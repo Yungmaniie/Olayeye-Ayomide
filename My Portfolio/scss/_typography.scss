@@ -1,0 +1,93 @@
+.logo{
+    font-family: $ff-inter;
+    color: $primary-color !important;
+    font-size:22px;
+    font-weight: 600; 
+
+    & img{
+        width: 120px;
+    }
+}
+.heading-primary{
+    font-family: $ff-inter;
+    color: $text-color;
+    font-size: 72px;
+    font-weight: 800;
+    @include respond(tab-land){
+        font-size: 60px;
+    }
+    @include respond(tab-port){
+        font-size: 45px;
+    }
+    @include respond(phone){
+        font-size: 35px;
+    }
+}
+.heading-secondary{
+    font-family: $ff-inter;
+    color: $text-color;
+    font-size: 48px;
+    font-weight: 800;
+    @include respond(tab-land){
+        font-size: 40px;
+    }
+    @include respond(tab-port){
+        font-size: 30px;
+    }
+    @include respond(phone){
+        font-size: 26px;
+    }
+}
+.heading-tertiary{
+    font-family: $ff-inter;
+    color: $text-color;
+    font-size: 22px;
+    font-weight: 500;
+    @include respond(tab-land){
+        font-size: 20px;
+    }
+}
+.heading-tertiary-22{
+    font-family: $ff-inter;
+    color: $text-color;
+    font-size: 22px;
+    font-weight: 600;
+    @include respond(tab-land){
+        font-size: 22px;
+    }
+    @include respond(tab-port){
+        font-size: 22px;
+    }
+    @include respond(phone){
+        font-size: 20px;
+    }
+}
+
+
+.header-text{
+    margin: 0;
+    padding: 0;
+    font-family: $ff-inter;
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.text-paragraph-18{
+    font-family: $ff-inter;
+    color: $text-color;
+    line-height: 1.7;
+    font-size: 18px;
+}
+.text-paragraph-16{
+    font-family: $ff-inter;
+    color: $text-color;
+    line-height: 1.7;
+    font-size: 16px;
+}
+.text-paragraph-14{
+    font-family: $ff-inter;
+    color: $text-color;
+    line-height: 1.7;
+    font-size: 14px;
+}

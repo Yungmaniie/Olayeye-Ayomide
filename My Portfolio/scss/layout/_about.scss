@@ -1,0 +1,31 @@
+// section - about
+.about{
+    width: 100%;
+    padding: 30px 0;
+    background-color: #FBFBFF;
+
+    &-container{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+
+        @include respond(tab-port){
+            gap: 40px;
+            flex-direction: column;
+        }
+    }
+    & img{
+        max-width: 500px;
+        width: 100%;
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}

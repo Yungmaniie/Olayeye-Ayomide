@@ -1,0 +1,37 @@
+.portfolio{
+    width: 100%;
+    padding: 30px 0;
+    background-color: #F9F9F9;
+    &-container{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        row-gap: 45px;
+        @include respond(phone){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    &-card{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        & img{
+            position: relative;
+            width: 100%;
+            transition: all .15s ease-in;
+
+            &:hover{
+                filter: brightness(80%);
+            }
+        }
+        &-content{
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

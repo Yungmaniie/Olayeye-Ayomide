@@ -1,0 +1,38 @@
+.contact{
+    width: 100%;
+    padding: 30px 0;
+    background-color: #F9F9F9 !important;
+
+    &-container{
+        width: 50%;
+        margin: 0 auto;
+
+        @include respond(tab-port){
+            width: 70%;
+        }
+        @include respond(phone){
+            width: 100%;
+            padding: 30px 20px;
+        }
+    }
+}
+.contact-input{
+    margin: 15px 0;
+
+    & label {
+        font-family: $ff-inter;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    & input ,textarea{
+        padding: 15px;
+        font-family: $ff-inter;
+        border-radius: 10px;
+        background-color: transparent;
+
+        &:focus{
+            box-shadow: none;
+            border-color: rgba($primary-color, 0.8);
+        }
+    }
+}

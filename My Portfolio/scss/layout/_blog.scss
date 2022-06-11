@@ -1,0 +1,109 @@
+// This file contains styles only for blog.html page
+.blog{position: relative;
+    
+    &-header{
+        position: relative;
+        width: 100%;
+        // min-height: 0vh;
+        height: 400px;
+        padding: 45px 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            
+            background-color: hsl(249, 68%, 96%);
+        // @author Steve Schoger
+        // @link :  https://heropatterns.com/
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%237562E0' fill-opacity='0.25' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+    }
+    &-heading{
+        width: 50%;
+        display: grid;
+        gap: 15px;
+        @include respond(tab-land){
+            width: 80%;
+        }
+    }
+    // --------------- Blog Card---------- //
+    &_cards{
+            width: 90%;
+            padding: 45px 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 45px;
+            flex-wrap: wrap;
+    }
+    &_card{
+        position: relative;
+        padding-bottom: 20px;
+        max-width: 350px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 16px 48px rgba(160, 160, 160, 0.15);
+        overflow: hidden;
+        transition: all 0.15s ease-in;
+
+        &:hover{
+            transform: translateY(-4px);
+            box-shadow: 0px 16px 48px rgba(160, 160, 160, 0.15),
+                        0px 16px 48px rgba(160, 160, 160, 0.15);
+        }
+        &:hover &_img{
+            filter: brightness(80%);   
+        }
+
+        &_img{
+            width: 100%;
+            transition: all 0.15s ease-in;
+        }
+        &_content{
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 15px;
+        }
+        &_heading{
+            font-size: 22px;
+            font-weight: 500;
+        }
+        // &_text{
+        //     color:#829AB1; 
+        //     font-weight: normal;
+        // }
+        &_text_link{
+            font-size: 16px;
+            color: $primary-color;
+            font-weight: 600;
+            font-family: $ff-inter;
+            transition: all 0.2s ease-in;
+
+            &:hover{
+                color: #5e4eb3 ;
+                transform: translateY(-2px);
+                text-decoration: underline;
+            }
+        }
+    }
+}
